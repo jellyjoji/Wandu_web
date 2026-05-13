@@ -248,8 +248,7 @@ export const translations = {
     contact: "Contact Us",
 
     // Footer
-    footerDesc:
-      "A global community & job platform available anywhere in the world",
+    footerDesc: "A global community available anywhere in the world",
     footerTagline: "Opportunities wherever you are.",
     platformSection: "Platform",
     jobs: "Jobs",
@@ -386,8 +385,7 @@ export const translations = {
     contact: "Contactez-nous",
 
     // Footer
-    footerDesc:
-      "Une plateforme mondiale de communauté et d'emploi disponible partout dans le monde",
+    footerDesc: "Une communauté mondiale disponible partout dans le monde",
     footerTagline: "Opportunités où que vous soyez.",
     platformSection: "Plateforme",
     jobs: "Emplois",
@@ -511,7 +509,7 @@ export const translations = {
     contact: "联系我们",
 
     // Footer
-    footerDesc: "在世界任何地方都可以使用的全球社区和求职平台",
+    footerDesc: "在世界任何地方都可以使用的全球社区",
     footerTagline: "Opportunities wherever you are.",
     platformSection: "平台",
     jobs: "求职/招聘",
