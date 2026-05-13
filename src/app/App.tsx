@@ -60,6 +60,14 @@ export default function App() {
     };
   }, [isMobileMenuOpen]);
 
+  const handleScrollToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+  };
+
   useEffect(() => {
     // Check for saved theme preference or default to system preference
     const savedTheme = localStorage.getItem("theme");
@@ -110,14 +118,15 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              type="button"
+              onClick={handleScrollToTop}
               className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity cursor-pointer"
             >
               <PeaLogo size={50} className="sm:hidden" />
               <PeaLogo size={60} className="hidden sm:block md:hidden" />
               <PeaLogo size={80} className="hidden md:block" />
               <span
-                className="text-lg sm:text-xl md:text-2xl font-bold"
+                className="hidden sm:inline text-lg sm:text-xl md:text-2xl font-bold"
                 style={{
                   background:
                     "linear-gradient(to right, #258D55, #30B66E, #64C74C)",
@@ -895,11 +904,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
-              <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="flex items-center gap-3 mb-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#49CF87]"
-                aria-label="Scroll to top"
-              >
+              <div className="flex items-center gap-3 mb-4">
                 <PeaLogo size={80} />
                 <span
                   className="text-2xl font-bold"
@@ -913,7 +918,7 @@ export default function App() {
                 >
                   WanduGo
                 </span>
-              </button>
+              </div>
               <p className="text-[#AEB4B0] mb-4 max-w-md">{t.footerDesc}</p>
               <p className="text-[#8D948F] text-sm">{t.footerTagline}</p>
             </div>
