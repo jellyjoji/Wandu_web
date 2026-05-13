@@ -1,0 +1,250 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* WanduGo Brand Colors */
+  /* Green */
+  --green-200: #9AE4BC;
+  --green-300: #72DAA2;
+  --green-400: #49CF87;
+  --green-500: #30B66E;
+  --green-600: #258D55;
+  --green-700: #1B653D;
+  --green-800: #103D25;
+  
+  /* Light Green */
+  --light-green-200: #EBF8E8;
+  --light-green-300: #C9ECC1;
+  --light-green-400: #A8E09A;
+  --light-green-500: #64C74C;
+  --light-green-600: #4CAB35;
+  --light-green-700: #3B8429;
+  --light-green-800: #2A5D1D;
+  
+  /* Yellow */
+  --yellow-200: #FFF5E0;
+  --yellow-300: #FFE3AD;
+  --yellow-400: #FFD27A;
+  --yellow-500: #FFC14A;
+  --yellow-600: #FFAF14;
+  --yellow-700: #E09400;
+  --yellow-800: #AD7200;
+  
+  /* Orange */
+  --orange-200: #FEF7F1;
+  --orange-300: #F8CDA5;
+  --orange-400: #F4B376;
+  --orange-500: #F09847;
+  --orange-600: #EC7D17;
+  --orange-700: #C16510;
+  --orange-800: #924C0C;
+  
+  /* Error (Red) */
+  --red-100: #F6E0E0;
+  --red-200: #EAB8B8;
+  --red-300: #DE9191;
+  --red-400: #D26A6A;
+  --red-500: #FA4343;
+  
+  /* Info (Blue) */
+  --blue-100: #C4DEFC;
+  --blue-200: #93C3FA;
+  --blue-300: #63A7F8;
+  --blue-400: #328CF6;
+  --blue-500: #0A72EC;
+  
+  /* Greenish Gray */
+  --gray-100: #FBFBFB;
+  --gray-200: #F6F8F7;
+  --gray-300: #DCE0DE;
+  --gray-400: #AEB4B0;
+  --gray-500: #8D948F;
+  --gray-600: #59625C;
+  --gray-700: #323E38;
+  --gray-800: #1A211D;
+}
+
+.dark {
+  --background: #1A211D;
+  --foreground: #FBFBFB;
+  --card: #323E38;
+  --card-foreground: #FBFBFB;
+  --popover: #323E38;
+  --popover-foreground: #FBFBFB;
+  --primary: #FBFBFB;
+  --primary-foreground: #1A211D;
+  --secondary: #59625C;
+  --secondary-foreground: #FBFBFB;
+  --muted: #59625C;
+  --muted-foreground: #AEB4B0;
+  --accent: #59625C;
+  --accent-foreground: #FBFBFB;
+  --destructive: #FA4343;
+  --destructive-foreground: #FBFBFB;
+  --border: #59625C;
+  --input: #59625C;
+  --ring: #8D948F;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: #323E38;
+  --sidebar-foreground: #FBFBFB;
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: #FBFBFB;
+  --sidebar-accent: #59625C;
+  --sidebar-accent-foreground: #FBFBFB;
+  --sidebar-border: #59625C;
+  --sidebar-ring: #8D948F;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
